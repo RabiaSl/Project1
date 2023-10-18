@@ -1,155 +1,98 @@
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: var(--color-darkblue);
-  background-image: linear-gradient(
-      115deg,
-      rgba(58, 58, 158, 0.8),
-      rgba(136, 136, 206, 0.7)
-    ),
-    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+<html>
+<head>
+  <link rel="stylesheet"
+  href="styles.css">
+</head>
+<body>
+<div class="">
+  <h1 id="title" class="text-center"> CodeCamp Survey Form</h1>
+  <p id="description" class="description text-center">Thank you for taking the time to help us improve the platform</p>
+  <form id="">
+    <div class="">
+      <label id="name" for="name">Name</label><input
+      id="name" name="name" type="text" class="" placeholder=" Enter your name" required>
+    </div>
+    <div class="">
+      <label id="email" for="email">Email</label>
+      <input id="email" name="email" type="text" class="" placeholder="Enter your Email" required>
+    </div>
 
-h1 {
-  font-weight: 400;
-  line-height: 1.2;
-}
+    <div class=""><label id="age" for="age">Age<span class="clue">(optional)<span>
+</label><input id="age" type="number"name="age" min="13" max="120" class="" placeholder="Age">
+    </div>
 
-p {
-  font-size: 1.125rem;
-}
+<div class="">
+<p>Which option best describes your current role?</p>
+<select id="current-role"  name="current-role" class="" required=""type="dropdown">
+  <option selected="" disabled="" value=""> Select current role</option>
+  <option value="Student"> Student</option>
+  <option value="Full Time Job"> Full Time Job</option>
+<option value="Full Time Learner"> Full Time Learner</option>
+<option value="Prefer not to say"> Prefer not to say</option>
+<option value="Others"> Others</option>
+</select>
+</div>
+<div class="">
+  <p>Would you recommend freeCodeCamp to a friend?</p>
+  <label> <input id="Definitely" type="radio" name="user-recommendation" class="" checked="">Definitely </label>
+  <label> <input id="Maybe" name="user-recommendation" class="" type="radio">Maybe</label>
+  <label><input id="not-sure" name="user-recommendation" type="radio" class="">Not sure</label>
+</div>
+<div class="">
+  <p>What is your favorite feature of freeCodeCamp?</p>
+  <select id="favorite-feature"name="favorite-feature" type="dropdown" class="" required="">
+    <option selected="" disabled="" value="select an option"> Select an option</option>
+    <option value="Challenges">Challenges</option>
+    <option value="Projects">Projects</option>
+    <option value="Community">Community</option>
+    <option value="Open Source">Open Source</option>
+  </select>
+</div>
+<div class="">
+  <p>What would you like to see improved? (Check all that apply)</p>
+ <label><input id="Front-end Projects" type="checkbox" name="improvement" class="" >Front-end Projects</label>
+<label><input id="Back-end Projects" name="improvement" type="checkbox" class="">Back-end Projects</label>
 
-h1,
-p {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
+<label><input id="Data-Visualization" name="improvement" type="checkbox" class="">Data Visualization</label>
 
-label {
-  display: flex;
-  align-items: center;
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem;
-}
+<label><input id="Challenges" name="improvement" type="checkbox" class="">Challenges</label>
 
-input,
-button,
-select,
-textarea {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-}
+<label><input id="Open-Source Community" name="improvement" type="checkbox" class="">Open Source Community</label>
 
-button {
-  border: none;
-}
+<label><input id="Gitter-help-rooms" name="improvement" type="checkbox" class="">Gitter help rooms</label>
+<label><input id="Videos" name="improvement" type="checkbox" class="">Videos</label>
 
-.container {
-  width: 100%;
-  margin: 3.125rem auto 0 auto;
-}
+<label><input id="Wiki" name="improvement" type="checkbox" class="">Wiki</label>
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
+<label><input id="City-Meetups" name="improvement" type="checkbox" class="">City Meetups</label>
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
+<label><input id="Forum" name="improvement" type="checkbox" class="">Forum</label>
 
-.header {
-  padding: 0 0.625rem;
-  margin-bottom: 1.875rem;
-}
+<label><input id="Additional-Courses" name="improvement" class="" type="checkbox">Additional Courses</label>
+</div>
+<div class="">
+  <p>Any comments or suggestions?</p>
+  <textarea id="comment" name="textarea" class="" placeholder="Enter your comment here..."></textarea>
+  </div>
+  <div>
+    <button id="submit" name="submit" type="submit" class="" >Submit</button>
+  </div>
 
-.description {
-  font-style: italic;
-  font-weight: 200;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-}
+  </form>
+</div>
 
-.clue {
-  margin-left: 0.25rem;
-  font-size: 0.9rem;
-  color: #e4e4e4;
-}
-
-.text-center {
-  text-align: center;
-}*/
+</body>
 
 
-form {
-  background: var(--color-darkblue-alpha);
-  padding: 2.5rem 0.625rem;
-  border-radius: 0.25rem;
-}
 
-@media (min-width: 480px) {
-  form {
-    padding: 2.5rem;
-  }
-}
+</html>
 
-.form-group {
-  margin: 0 auto 1.25rem auto;
-  padding: 0.25rem;
-}
 
-.form-control {
-  display: block;
-  width: 100%;
-  height: 2.375rem;
-  padding: 0.375rem 0.75rem;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
+ 
+  
+  
 
-.form-control:focus {
-  border-color: #80bdff;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
 
-.input-radio,
-.input-checkbox {
-  display: inline-block;
-  margin-right: 0.625rem;
-  min-height: 1.25rem;
-  min-width: 1.25rem;
-}
 
-.input-textarea {
-  min-height: 120px;
-  width: 100%;
-  padding: 0.625rem;
-  resize: vertical;
-}
 
-.submit-button {
-  display: block;
-  width: 100%;
-  padding: 0.75rem;
-  background: var(--color-green);
-  color: inherit;
-  border-radius: 2px;
-  cursor: pointer;
-}
+ 
